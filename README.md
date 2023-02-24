@@ -8,7 +8,8 @@ Alt Kategoriyaların qurulması + RestFramework
 #### Bu linkin API ile elaqesi yoxdur sadece html-de dinamik tree gostermek ucun yazdim
 <p>http://localhost:8000/products/</p>
 
-#### Endpoints
+# Endpoints
+
 ##### Butun Productlara bax
 <p>http://localhost:8000/products/api/all/</p>
 
