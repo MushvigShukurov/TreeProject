@@ -15,9 +15,3 @@ class Category(models.Model):
     def __str__(self) -> str:
         return self.category_name
     
-    # def get_sub_categories(self):
-    #     sub_categories = []
-    #     for sub_category in self.sub_categories.all():
-    #         sub_categories.append(sub_category)
-    #         sub_categories.extend(sub_category.get_sub_categories())
-    #     return sub_categories
