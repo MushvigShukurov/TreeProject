@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block title %}Tree Project{% endblock title %}
+
+
+
+{% block body %}
+
+<h1>Categories</h1>
+<ul>
+{% for category in categories %}
+    <li> 
+        {{category.category_name}} 
+        {% if category.sub_categories %}
+            {% include 'list.html' with categories=category.sub_categories.all %}
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <ul>
+    {% for category in categories %}
+        <li>
+            {{category.category_name}}
+            {% if category.sub_categories.all %}
+                {% include 'list.html' with sub_categories=category.get_sub_categories %}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul> {% endcomment %}
+
+{% endblock body %}

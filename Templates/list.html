@@ -1,0 +1,10 @@
+<ul>
+    {% for category in categories %}
+        <li>
+            {{category.category_name}}
+            {% if category.sub_categories.all %}
+                {% include 'list.html' with categories=category.sub_categories.all %}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
